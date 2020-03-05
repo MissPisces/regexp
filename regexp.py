@@ -71,7 +71,18 @@ sqhghl@163.com 谢谢~
 
 27212218@qq.com谢谢
 '''
+
 # \d 匹配数字 \D 匹配非数字
-result = re.findall('\d+', text)
-print(result)
-print(re.findall('\D+', text))
+# + 匹配一个或多个字符
+# * 匹配0个或多个
+# . 匹配任意一个字符
+# .* 匹配所有字符(贪婪匹配)
+# .*? 非贪婪匹配
+# 字符集 [0-9a-z]
+result = re.findall('\d', text)
+print(re.findall('\D', text))
+print(re.findall('\d', text))
+print(re.findall('\d+', text))
+print(re.findall('\d*', text))
+print(re.findall('\d.', text))
+print(re.findall('[a-z]+', text))
